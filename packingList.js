@@ -29,7 +29,7 @@ function confirmOrder() {
     
     var PAT = i + 1;
     
-    if(product == '1') { // Single cup
+    if(product == '1') { // Product 1
       spreadsheet.getRange(currentListCell).activate();                                                                             // go to start location.
       spreadsheet.getRange('Extra!AB1:AC2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false); //copy extra and paste to variant sheet.
       // create dropdown 1.
@@ -40,7 +40,7 @@ function confirmOrder() {
       var currentListCell = cellArray[cellArrayPos];
     };
     
-    if(product == '2') { // Double cup
+    if(product == '2') { // Product 2
       spreadsheet.getRange(currentListCell).activate();
       spreadsheet.getRange('Extra!AI1:AJ2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
       spreadsheet.getRange(currentListCell).offset(2, 0).setDataValidation(SpreadsheetApp.newDataValidation().setAllowInvalid(true).requireValueInRange(spreadsheet.getRange('Extra!$AI$3:$AI$4'), true).build());
@@ -49,7 +49,7 @@ function confirmOrder() {
       var currentListCell = cellArray[cellArrayPos];
     };
     
-    if(product == '3') { // S/S Button
+    if(product == '3') { // Product 3
       spreadsheet.getRange(currentListCell).activate();
       spreadsheet.getRange('Extra!AP1:AR2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
       spreadsheet.getRange(currentListCell).offset(2, 0).setDataValidation(SpreadsheetApp.newDataValidation().setAllowInvalid(true).requireValueInRange(spreadsheet.getRange('Extra!$AP$3:$AP$4'), true).build());
@@ -59,7 +59,7 @@ function confirmOrder() {
       var currentListCell = cellArray[cellArrayPos];
     };
     
-    if(product == '4') { // Amusement Button
+    if(product == '4') { // Product 4
       spreadsheet.getRange(currentListCell).activate();
       spreadsheet.getRange('Extra!AX1:AX2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
       spreadsheet.getRange(currentListCell).offset(2, 0).setDataValidation(SpreadsheetApp.newDataValidation().setAllowInvalid(true).requireValueInRange(spreadsheet.getRange('Extra!$AX$3:$AX$5'), true).build());
@@ -67,7 +67,7 @@ function confirmOrder() {
       var currentListCell = cellArray[cellArrayPos];
     };
     
-    if(product == '5') { // Speaker
+    if(product == '5') { // Product 5
       spreadsheet.getRange(currentListCell).activate();
       spreadsheet.getRange('Extra!BD1:BE2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
       spreadsheet.getRange(currentListCell).offset(2, 0).setDataValidation(SpreadsheetApp.newDataValidation().setAllowInvalid(true).requireValueInRange(spreadsheet.getRange('Extra!$BD$3:$BD$6'), true).build());
@@ -76,7 +76,7 @@ function confirmOrder() {
       var currentListCell = cellArray[cellArrayPos];
     };
     
-    if(product == '7') { // VideoClip
+    if(product == '7') { // Product 7
       spreadsheet.getRange(currentListCell).activate();
       spreadsheet.getRange('Extra!M1:O2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
       spreadsheet.getRange(currentListCell).offset(2, 0).setDataValidation(SpreadsheetApp.newDataValidation().setAllowInvalid(true).requireValueInRange(spreadsheet.getRange('Extra!$M$3:$M$4'), true).build());
@@ -86,7 +86,7 @@ function confirmOrder() {
       var currentListCell = cellArray[cellArrayPos];
     };
     
-    if(product == '11') { // Screen
+    if(product == '11') { // Product 11
       spreadsheet.getRange(currentListCell).activate();
       spreadsheet.getRange('Extra!U1:V2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
       spreadsheet.getRange(currentListCell).offset(2, 0).setDataValidation(SpreadsheetApp.newDataValidation().setAllowInvalid(true).requireValueInRange(spreadsheet.getRange('Extra!$U$3:$U$6'), true).build());
@@ -132,7 +132,7 @@ function confirmVariants() {
   
   for ( i = 0; i <= 1000; i++ ) {
     
-    if( product == 'SC/HP') {
+    if( product == 'Product 1') {
       spreadsheet.setActiveSheet(spreadsheet.getSheetByName('List'), true);
       spreadsheet.getRange(currentListCellArray[currentPos]).activate();
       spreadsheet.getRange('\'Master Checklist\'!A27:C28').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
@@ -159,7 +159,7 @@ function confirmVariants() {
       var VAP = VAP + 2;
     };
     
-    if ( product == 'DC/HP') {
+    if ( product == 'Product 2') {
       spreadsheet.setActiveSheet(spreadsheet.getSheetByName('List'), true);
       spreadsheet.getRange(currentListCellArray[currentPos]).activate();
       spreadsheet.getRange('\'Master Checklist\'!A36:C37').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
@@ -184,7 +184,7 @@ function confirmVariants() {
       var VAP = VAP + 1;
     };
     
-    if( product == 'S/S Button') {
+    if( product == 'Product 3') {
       spreadsheet.setActiveSheet(spreadsheet.getSheetByName('List'), true);
       spreadsheet.getRange(currentListCellArray[currentPos]).activate();
       spreadsheet.getRange('\'Master Checklist\'!A86:C88').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
@@ -243,7 +243,7 @@ function confirmVariants() {
       var TAP = TAP + 3;
       var VAP = VAP + 1;
     };
-    if( product == 'Amusement Buttons') {
+    if( product == 'Product 3') {
       spreadsheet.setActiveSheet(spreadsheet.getSheetByName('List'), true);
       spreadsheet.getRange(currentListCellArray[currentPos]).activate();
       spreadsheet.getRange('\'Master Checklist\'!A95:C97').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
@@ -268,7 +268,7 @@ function confirmVariants() {
       var TAP = TAP + 1;
       var VAP = VAP + 1;
     };
-    if( product == 'Speaker') {
+    if( product == 'Product 4') {
       spreadsheet.setActiveSheet(spreadsheet.getSheetByName('List'), true);
       spreadsheet.getRange(currentListCellArray[currentPos]).activate();
       var option1 = variantArray[VAP];
@@ -281,11 +281,11 @@ function confirmVariants() {
         spreadsheet.getRange('\'Master Checklist\'!A64:C65').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
         var currentPos = currentPos + 2;
       };
-      if (option1 == 'Minibox' ) {
+      if (option1 == 'Style 1' ) {
         spreadsheet.getRange('\'Master Checklist\'!A71:C72').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
         var currentPos = currentPos + 2;
       };
-      if (option1 == 'Atmospheric' ) {
+      if (option1 == 'Style 2' ) {
       spreadsheet.getRange('\'Master Checklist\'!A79:C79').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
         var currentPos = currentPos + 1;
       };
